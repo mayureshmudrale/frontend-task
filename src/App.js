@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-
+import One from './component/One';
+import Split from 'react-split'
+import Two from './component/Two';
+import Three from './component/Three';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Split direction='vertical' style={{ height:'100vh' }}>
+        <Split  className='flex flex-grow'>
+          {/* <div className='bg-gray-300 '></div> */}
+          <One/>
+          {/* <div className='bg-gray-300 '></div> */}
+          <Two/>
+          
+        </Split>
+        {/* <div className='bg-gray-400'></div> */}
+        <Three />
+      </Split>
   );
 }
 
